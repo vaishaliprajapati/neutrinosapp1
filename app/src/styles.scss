@@ -1,0 +1,14 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+.btn-default {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+.btn-default:hover,
+.btn-default:hover {
+    background-color: #f00;
+}

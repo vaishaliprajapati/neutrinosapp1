@@ -1,0 +1,177 @@
+[
+    {
+        "id": "sd_T0Yp4XSiQH1v2qYT",
+        "type": "tab",
+        "createdDate": "2022-04-25T09:47:27.254Z",
+        "label": "list",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_xbo4NVLXlqBuUBVD",
+        "type": "OnInit",
+        "z": "sd_T0Yp4XSiQH1v2qYT",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_xbo4NVLXlqBuUBVD",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_c7uZA4Qy3u4hki9n"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_c7uZA4Qy3u4hki9n",
+        "type": "PageVariables",
+        "z": "sd_T0Yp4XSiQH1v2qYT",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "blogs",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_c7uZA4Qy3u4hki9n",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_buG6U3hG0MXJpfNU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_buG6U3hG0MXJpfNU",
+        "type": "Script",
+        "z": "sd_T0Yp4XSiQH1v2qYT",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.blogs = [\n    {\n        \"id\": 1,\n        \"title\": \"Blog one\",\n        \"description\": \"This is blog one\",\n        \"image\": \"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Blog two\",\n        \"description\": \"This is blog two\",\n        \"image\": \"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=\"\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Blog three\",\n        \"description\": \"This is blog three\",\n        \"image\": \"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Blog four\",\n        \"description\": \"This is blog four\",\n        \"image\": \"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"Blog five\",\n        \"description\": \"This is blog five\",\n        \"image\": \"https://media.istockphoto.com/vectors/thumbnail-image-vector-graphic-vector-id1147544807?k=20&m=1147544807&s=612x612&w=0&h=pBhz1dkwsCMq37Udtp9sfxbjaMl27JUapoyYpQm0anc=\"\n    }\n];",
+        "functionName": "sd_buG6U3hG0MXJpfNU",
+        "category": "Function",
+        "x": 445,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_rSGemBe2B0o4D321",
+        "type": "PageStart",
+        "z": "sd_T0Yp4XSiQH1v2qYT",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Navigate to detail page",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "blog",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "navigateToDetailPage",
+        "category": "General",
+        "x": 80,
+        "y": 200,
+        "wires": [
+            [
+                "sd_HzbDjbTHVyKjtp8D"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_IQvdtanxKv4tukL2",
+        "type": "Navigation",
+        "z": "sd_T0Yp4XSiQH1v2qYT",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/detail/:id",
+        "pathparams": [
+            {
+                "paramKey": "id",
+                "paramValue": {
+                    "type": "bh.input",
+                    "value": "blog.id"
+                }
+            }
+        ],
+        "functionName": "sd_IQvdtanxKv4tukL2",
+        "category": "Navigation",
+        "x": 300,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_HzbDjbTHVyKjtp8D",
+        "type": "Storage",
+        "z": "sd_T0Yp4XSiQH1v2qYT",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "setLocalStorage",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedBlog"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "blog"
+        },
+        "resultMapping": {},
+        "functionName": "setLocalStorage",
+        "category": "Storage",
+        "x": 180,
+        "y": 200,
+        "wires": [
+            [
+                "sd_IQvdtanxKv4tukL2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

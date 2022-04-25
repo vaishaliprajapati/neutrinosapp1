@@ -1,0 +1,90 @@
+[
+    {
+        "id": "sd_3VF7CTrdqrEgnR1B",
+        "type": "tab",
+        "createdDate": "2022-04-25T11:12:08.430Z",
+        "label": "detail",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "detailComponent"
+    },
+    {
+        "id": "sd_NZ5SqGFY5qeQbcmy",
+        "type": "OnInit",
+        "z": "sd_3VF7CTrdqrEgnR1B",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "functionName": "sd_NZ5SqGFY5qeQbcmy",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_gxJg4ubaYbguzjMg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "detailComponent"
+    },
+    {
+        "id": "sd_gxJg4ubaYbguzjMg",
+        "type": "PageVariables",
+        "z": "sd_3VF7CTrdqrEgnR1B",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_gxJg4ubaYbguzjMg",
+        "category": "Function",
+        "x": 425,
+        "y": 240,
+        "wires": [
+            [
+                "sd_IKAvdVK6Wej8Gm25"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_IKAvdVK6Wej8Gm25",
+        "type": "Storage",
+        "z": "sd_3VF7CTrdqrEgnR1B",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "getBlog",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedBlog"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "blog"
+        },
+        "functionName": "getBlog",
+        "category": "Storage",
+        "x": 565,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]
